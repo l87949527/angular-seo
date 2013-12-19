@@ -7,8 +7,11 @@
 <div my-comment></div>
 
 <div>
-    <expander class="expander" expander-title="text">
-        {{text}}
-    </expander>
+    <accordion>
+        <expander ng-repeat="expander in expanders" class="expander" expander-title="expander.title" call="callMe(message)">
+            {{expander.text}}
+        </expander>
+    </accordion>
+
 
 </div>
